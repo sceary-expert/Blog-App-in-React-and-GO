@@ -1,0 +1,86 @@
+
+.container {
+    font-family: 'Poppins', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .searchInput {
+    margin-bottom: 20px;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  .preview {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .previewContent {
+    font-size: 16px;
+    color: #666;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 8px;
+  }
+  
+  .previewTitle {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .readMoreButton {
+    background-color: #017afe;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .post {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    font-family: 'Poppins', serif;
+  }
+  
+  .selectedPostBody {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .backButton {
+    background-color: #017afe;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 16px;
+  }
+  
