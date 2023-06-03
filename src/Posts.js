@@ -7,7 +7,6 @@ function Posts() {
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedPost, setSelectedPost] = useState(null);
-
   useEffect(() => {
     fetch('http://localhost:8080/posts')
       .then(response => response.json())
