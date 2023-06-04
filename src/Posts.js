@@ -8,7 +8,7 @@ function Posts() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedPost, setSelectedPost] = useState(null);
   useEffect(() => {
-    fetch('http://localhost:8080/posts')
+    fetch('https://loomi-backend-private.onrender.com/posts')
       .then(response => response.json())
       .then(data => {
         if (data.status === 200) {
