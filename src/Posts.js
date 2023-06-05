@@ -18,7 +18,7 @@ function Posts() {
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedPost, setSelectedPost] = useState(null);
-  const [visitorCount, setVisitorCount] = useState(285); 
+  const [visitorCount, setVisitorCount] = useState(0); 
   useEffect(() => {
     fetch('https://loomi-backend-private.onrender.com/posts')
       .then(response => response.json())
@@ -33,6 +33,7 @@ function Posts() {
       .catch(error => {
         setError(error);
         setLoading(false);
+        setVisitorCount(285);
       });
   }, []);
 
