@@ -26,6 +26,7 @@ function Posts() {
         if (data.status === 200) {
           setPosts(data.data.data);
           setLoading(false);
+          setVisitorCount(285);
         } else {
           throw new Error(data.message);
         }
@@ -33,7 +34,7 @@ function Posts() {
       .catch(error => {
         setError(error);
         setLoading(false);
-        setVisitorCount(285);
+        
       });
   }, []);
 
