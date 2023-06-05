@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './Posts.css';
+import VisitorCount from './VisitorCount';
+// SkeletonLoading component to represent the loading state
+const SkeletonLoading = () => {
+  return (
+    <div className="skeletonLoading">
+      <div className="skeletonTitle"></div>
+      <div className="skeletonContent"></div>
+      <div className="skeletonButton"></div>
+    </div>
+  );
+};
 
 function Posts() {
   const [posts, setPosts] = useState([]);
@@ -7,6 +18,7 @@ function Posts() {
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedPost, setSelectedPost] = useState(null);
+  const [visitorCount, setVisitorCount] = useState(285); 
   useEffect(() => {
     fetch('https://loomi-backend-private.onrender.com/posts')
       .then(response => response.json())
@@ -37,7 +49,21 @@ function Posts() {
   );
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="container">
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={handleSearchChange}
+          placeholder="Search articles..."
+          className="searchInput"
+        />
+        <SkeletonLoading /> {/* Render the SkeletonLoading component */}
+        <SkeletonLoading />
+        <SkeletonLoading />
+        
+      </div>
+    );
   }
 
   if (error) {
@@ -72,6 +98,7 @@ function Posts() {
           </div>
         ))
       )}
+      <VisitorCount count={visitorCount} />
     </div>
   );
 }
