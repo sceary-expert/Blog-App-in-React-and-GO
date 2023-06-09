@@ -20,8 +20,8 @@ function Posts() {
   const [selectedPost, setSelectedPost] = useState(null);
   const [visitorCount, setVisitorCount] = useState(10); 
   useEffect(() => {
-    // fetch('https://loomi-backend-private.onrender.com/posts')
-    fetch('http://localhost:8080/posts')
+    fetch('https://loomi-backend-private.onrender.com/posts')
+    // fetch('http://localhost:8080/posts')
       .then(response => response.json())
       .then(data => {
         if (data.status === 200) {
